@@ -31,6 +31,11 @@ const setQuestions = () => {
             type: 'text',
             message: 'Functions (comma separated)?',
         },{
+            name: 'ipRange',
+            type: 'text',
+            message: 'IP Range?',
+            default: '10.8.0.0/28'
+        },{
             name: 'commandsOnly',
             type: 'confirm',
             message: 'Commands only?',
@@ -58,7 +63,7 @@ const createVPC = (responses) => {
 
 const createVPCConnector = (responses) => {
     try {
-        const command = `gcloud compute networks vpc-access connectors create ${responses.connectorName} --region ${responses.region} --network ${responses.vpcName} --range gcloud compute networks vpc-access connectors create cloud-functions-connector --region us-central1 --network cloud-functions-egress --range 10.8.0.0/28`
+        const command = `gcloud compute networks vpc-access connectors create ${responses.connectorName} --region ${responses.region} --network ${responses.vpcName} --range ${responses.ipRange} --project ${responses.project}`
         if (responses.commandsOnly){
             return command;
         }
@@ -99,7 +104,7 @@ const updateCloudFunctions = (responses) => {
             .functions
             .split(',')
             .map((functionName)=> {
-                return `gcloud functions deploy ${functionName.trim()} --vpc-connector ${responses.connectorName}`
+                return `gcloud functions deploy ${functionName.trim()} --vpc-connector ${responses.connectorName} --project ${responses.project}`
             })
 
         const command = commands.join(' && ')
