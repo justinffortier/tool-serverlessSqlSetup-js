@@ -1,0 +1,13 @@
+{
+  "name": "tool-serverlessSqlSetup-js",
+  "version": "1.0.0",
+  "description": "Installs VPC and SQL Connector",
+  "main": "cloudSetup.js",
+  "repository": "https://github.com/justinffortier/tool-serverlessSqlSetup-js",
+  "author": "Justin Fortier <justinffortier@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
