@@ -11,7 +11,7 @@
 
 ## Description
 
-A tool using GCP VPC to grant access to CloudSQL.
+A tool that runs through all the steps to create a serverless Virtual Private Cloud (VPC) Access Connector, all you have to do is answer a few questions in your terminal! 
 
 ## Setup
 
@@ -32,10 +32,10 @@ You will then be taken through the following questions:
 
 - `Project?` (This is your GCP Project Name)
 - `Region?`  (This is your GCP Region - this should be the same region across all services)        
-- `vpcName?`
-- `Connector Name?`
-- `Sql Instance?`
-- `Functions`
+- `vpcName?` (A name for your VPC)
+- `Connector Name?` (A name for your connector)
+- `Sql Instance?` (You will need the SQL instance name which can be found in your GCP interface on the browser)
+- `Functions` (Any of your Cloud functions that you want to have connected to the VPC)
 - `IP Range?` (note the default is 10.8.0.0/28)
 - `Commands only?`
 
