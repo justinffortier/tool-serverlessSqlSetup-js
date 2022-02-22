@@ -30,16 +30,16 @@ A tool using GCP VPC to grant access to CloudSQL.
 You will then be taken through the following questions: 
 > Make sure you have a note on your exact project name and region from your GCP project. 
 
-- `Project?`
-- `Region?`          
+- `Project?` (This is your GCP Project Name)
+- `Region?`  (This is your GCP Region - this should be the same region across all services)        
 - `vpcName?`
 - `Connector Name?`
 - `Sql Instance?`
 - `Functions`
-- `IP Range?` (note the defaul is 10.8.0.0/28)
+- `IP Range?` (note the default is 10.8.0.0/28)
 - `Commands only?`
 
-After inputting the values to these questions, the tool will run commands to setup your vcp connector.s
+After inputting the values to these questions, the tool will run commands to setup your vcp connectors.
 
 ## Contributing
 
