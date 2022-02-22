@@ -15,15 +15,31 @@ A tool using GCP VPC to grant access to CloudSQL.
 
 ## Setup
 
-#### Coming Soon (Install using NPM)
-
 ### Clone the project
 
 > We recommend that you clone using SSH, if you need a refresher on how got to the [Github guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 
-#### Copy the code 
+#### Install Dependencies
 
-Create a file called `cloudSetup.js` and copy the code into file in your NodeJS enabled project. 
+`yarn install`
+
+#### Start up the tool 
+
+`node cloudSetup.js`
+
+You will then be taken through the following questions: 
+> Make sure you have a note on your exact project name and region from your GCP project. 
+
+- `Project?`
+- `Region?`          
+- `vpcName?`
+- `Connector Name?`
+- `Sql Instance?`
+- `Functions`
+- `IP Range?` (note the defaul is 10.8.0.0/28)
+- `Commands only?`
+
+After inputting the values to these questions, the tool will run commands to setup your vcp connector.s
 
 ## Contributing
 
