@@ -37,7 +37,7 @@ You will then be taken through the following questions:
 - `Sql Instance?` (You will need the SQL instance name which can be found in your GCP interface on the browser)
 - `Functions` (Any of your Cloud functions that you want to have connected to the VPC)
 - `IP Range?` (note the default is 10.8.0.0/28)
-- `Commands only?`
+- `Commands only?` (If you want all of the GCP CLI commands printed out for you to initiate manually)
 
 After inputting the values to these questions, the tool will run commands to setup your vcp connectors.
 
